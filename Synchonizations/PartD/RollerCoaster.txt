@@ -1,0 +1,21 @@
+You have to solve upon the problem of roller coaster ride. 
+Consider a roller coaster ride at an amusement park. 
+The ride operator runs the ride only when there are exactly N riders on it. 
+Multiple riders arrive at the ride and queue up at the entrance of the ride.
+The ride operator waits for N riders to accumulate, and may even take a nap as he waits.
+Once N riders have arrived, the riders call out to the operator indicating they are ready to go on the ride. 
+The operator then opens the gate to the ride and signals exactly N riders to enter the ride.
+He then waits until these N riders enter the ride, and then proceeds to start the ride.
+After that, the ride starts for some time. Till then, the riders are wiating to exit the ride.
+After some time, when the ride ends, the operator sleeps untill all the N riders come out from the Roller Coaster.
+The Nth person, who exits the ride ast last, wakes the operator saying that all the riders have exited successfully.
+Then, again the operator waits for the group of N person to start the ride. 
+If there are N or more people already waiting outside, then operator will immediately starts the process of starting the ride, else he will sleep and wait for the Nth person to wake him up.
+And this process goes on.
+
+Write a complete program to do so. Make operator and riders threads in your program to their own works. 
+Make the program such that you can change the values of N in the program just at one place(not changing whole code when N is changed), and also the number of riders for this ride.
+The main program should make the threads, all the rest roller coaster waiting and all things should be done by the thread itself.
+You have to solve this questions by using two methods.
+First method is to use mutex and condition variables from the standard pthread library.
+Second method is to only use zemaphore(no conditional variables or locks from the pthread library in the program).
